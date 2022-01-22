@@ -36,7 +36,6 @@ class Phonebook
 
 	private:
 	std::string	_cat_string(std::string s);
-	int	_check_index();
 };
 
 
