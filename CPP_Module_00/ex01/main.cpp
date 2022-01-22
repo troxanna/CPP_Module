@@ -3,7 +3,6 @@
 
 int	main(void)
 {
-	Contact contact;
 	Phonebook book;
 	std::string input;
 
@@ -20,6 +19,8 @@ int	main(void)
 			book.print_list();
 			book.print_contact();
 		}
+		else
+			std::cout << "Unknown command. Please, try again.";
 		std::cout << std::endl;
 	}
 }

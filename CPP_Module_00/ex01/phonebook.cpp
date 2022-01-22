@@ -60,8 +60,10 @@ void	Phonebook::print_contact()
 	std::cout << "Enter index: \n";
 	std::cin >> index;
 	if (index > this->count + 1)
-		return ;
-	//Добавить текст ошибки
+	{
+		std::cout << "Invalid index. Please, try again.\n";
+		this->print_contact();
+	}
 	std::cout << std::endl;
 	std::cout << "First name: " << this->list[index - 1].f_name << std::endl;
 	std::cout << "Last name: " << this->list[index - 1].l_name << std::endl;
