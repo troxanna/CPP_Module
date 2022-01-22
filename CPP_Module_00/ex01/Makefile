@@ -1,5 +1,6 @@
 NAME = phonebook
-CPP_FILE = main.cpp
+CPP_FILE = main.cpp phonebook.cpp
+INC_FILE = phonebook.hpp
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
