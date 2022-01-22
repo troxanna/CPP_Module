@@ -25,9 +25,9 @@ class Phonebook
 	Phonebook(size_t size = 8, int	width = 10) : size(size), width(width),
 			count(0), list(new Contact [size])
 	{};
-	void	add();
-	void	print_list();
-	void	print_contact();
+	void	add( void );
+	void	print_list( void );
+	void	print_contact( void );
 
 	size_t size;
 	int	width;

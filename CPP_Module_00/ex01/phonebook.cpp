@@ -2,7 +2,7 @@
 
 // void	Phonebook::add(std::string f_name, std::string l_name,
 // 	std::string nickname, std::string p_number, std::string secret)
-void	Phonebook::add()
+void	Phonebook::add( void )
 {
 	if (count == (int)this->size - 1)
 		count--;
@@ -31,7 +31,7 @@ std::string	Phonebook::_cat_string(std::string s)
 	
 }
 
-void	Phonebook::print_list()
+void	Phonebook::print_list( void )
 {
 	std::cout.width((this->width * 4) + 6);
 	std::cout.fill('-');
@@ -53,7 +53,7 @@ void	Phonebook::print_list()
 	}
 }
 
-void	Phonebook::print_contact()
+void	Phonebook::print_contact( void )
 {
 	int	index;
 
