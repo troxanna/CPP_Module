@@ -35,8 +35,8 @@ class Phonebook
 	Contact *list;
 
 	private:
-	std::string	cat_string(std::string s);
-	int	check_index();
+	std::string	_cat_string(std::string s);
+	int	_check_index();
 };
 
 

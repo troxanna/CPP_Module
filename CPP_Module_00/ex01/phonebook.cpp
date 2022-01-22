@@ -20,7 +20,7 @@ void	Phonebook::add()
 	count++;
 }
 
-std::string	Phonebook::cat_string(std::string s)
+std::string	Phonebook::_cat_string(std::string s)
 {
 	std::string result;
 	if (s.size() > 10)
@@ -46,14 +46,14 @@ void	Phonebook::print_list()
 	{
 		std::cout.fill(' ');
 		std::cout << "|" << std::setw(10) << this->list[i].id << "|";
-		std::cout << std::setw(10) << this->cat_string(this->list[i].f_name) << "|";
-		std::cout << std::setw(10) << this->cat_string(this->list[i].l_name) << "|";
-		std::cout << std::setw(10) << this->cat_string(this->list[i].nickname) << "|";
+		std::cout << std::setw(10) << this->_cat_string(this->list[i].f_name) << "|";
+		std::cout << std::setw(10) << this->_cat_string(this->list[i].l_name) << "|";
+		std::cout << std::setw(10) << this->_cat_string(this->list[i].nickname) << "|";
 		std::cout << '\n';
 	}
 }
 
-int	Phonebook::check_index()
+int	Phonebook::_check_index()
 {
 	int	index;
 
@@ -69,7 +69,7 @@ void	Phonebook::print_contact()
 {
 	int	index;
 
-	index = this->check_index();
+	index = this->_check_index();
 	if (!index)
 		return ;
 	std::cout << std::endl;
