@@ -10,7 +10,13 @@ class Contact
 	// Contact(): f_name(0), l_name(0), nickname(0), p_number(0), secret(0)
 	// {};
 	public:
-	Contact(): id(0) {};
+	Contact(): id(0),
+	f_name(std::string()),
+	l_name(std::string()),
+	nickname(std::string()),
+	p_number(std::string()),
+	secret(std::string())	
+	{};
 	std::string f_name;
 	std::string l_name;
 	std::string nickname;
