@@ -1,5 +1,5 @@
-NAME = BraiiiiiiinnnzzzZ
-CPP_FILE = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+NAME = MoarBrainz!
+CPP_FILE = main.cpp ZombieHorde.cpp Zombie.cpp
 INC_FILE = Zombie.hpp
 CFLAGS = -Wall -Wextra -Werror
 
