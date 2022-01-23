@@ -4,8 +4,8 @@
 // 	std::string nickname, std::string p_number, std::string secret)
 void	Phonebook::add( void )
 {
-	if (count == (int)this->size - 1)
-		count--;
+	if (this->count == (int)this->size - 1)
+		this->count--;
 	std::cout << "First name: ";
 	std::cin >> this->list[count].f_name;
 	std::cout << "Last name: ";
@@ -16,8 +16,8 @@ void	Phonebook::add( void )
 	std::cin >> this->list[count].p_number;
 	std::cout << "Darkset secret: ";
 	std::cin >> this->list[count].secret;
-	this->list[count].id = count + 1;
-	count++;
+	this->list[count].setId(count + 1);
+	this->count++;
 }
 
 std::string	Phonebook::_cat_string(std::string s)
@@ -33,7 +33,7 @@ std::string	Phonebook::_cat_string(std::string s)
 
 void	Phonebook::print_list( void )
 {
-	std::cout.width((this->width * 4) + 6);
+	std::cout.width((10 * 4) + 6);
 	std::cout.fill('-');
 	std::cout << '\n';
 	std::cout.fill(' ');
@@ -45,7 +45,7 @@ void	Phonebook::print_list( void )
 	for (int i = 0; i < this->count; i++)
 	{
 		std::cout.fill(' ');
-		std::cout << "|" << std::setw(10) << this->list[i].id << "|";
+		std::cout << "|" << std::setw(10) << this->list[i].getId() << "|";
 		std::cout << std::setw(10) << this->_cat_string(this->list[i].f_name) << "|";
 		std::cout << std::setw(10) << this->_cat_string(this->list[i].l_name) << "|";
 		std::cout << std::setw(10) << this->_cat_string(this->list[i].nickname) << "|";
