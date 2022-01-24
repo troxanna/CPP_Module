@@ -1,5 +1,5 @@
-NAME = Sed_is_for_losers
-CPP_FILE = main.cpp 
+NAME = replace
+CPP_FILE = main.cpp Sed.cpp
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)

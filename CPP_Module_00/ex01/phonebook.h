@@ -37,6 +37,8 @@ class Phonebook
 	Phonebook(size_t size = 8) : size(size),
 			count(0), list(new Contact [size])
 	{};
+	~Phonebook() { delete [] list; }
+
 	void	add( void );
 	void	print_list( void );
 	void	print_contact( void );
