@@ -2,13 +2,7 @@
 
 void	print_error(std::string errMessage)
 {
-	std::cout << errMessage;
-
-		// else if (errCode == 2)
-		// 	std::cout << "Empthy string\n";
-		// else if (errCode == 3)
-		// 	std::cout << "Invalid file\n";
-	
+	std::cout << errMessage;	
 }
 
 int	main( int argc, char **argv )
@@ -23,6 +17,5 @@ int	main( int argc, char **argv )
 		print_error("Invalid file\n");
 	if (!test.replace(argv[2], argv[3]))
 		print_error("Invalid file\n");
-	
-
+	return (0);
 }
