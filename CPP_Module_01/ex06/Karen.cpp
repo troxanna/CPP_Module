@@ -13,9 +13,26 @@ Karen::Karen( void )
 
 void Karen::complain( const std::string& level )
 {
+	int	filter;
+
 	for (int i = 0; i < 4; i++)
 		if (level == levels[i])
-			(this->*ptrFunc[i])();
+			filter = i;
+	switch (filter)
+	{
+	case 0:
+		(this->*ptrFunc[0])();
+		filter++;	
+	case 1:
+		(this->*ptrFunc[1])();
+		filter++;
+	case 2:
+		(this->*ptrFunc[2])();
+		filter++;
+	case 3:
+		(this->*ptrFunc[3])();
+		break;
+	}
 }
 
 void Karen::debug(void) {
