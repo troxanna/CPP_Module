@@ -1,5 +1,13 @@
 #include "Sed.hpp"
 
+Sed::~Sed (void)
+{
+	if (this->inFile.is_open()) 
+		this->inFile.close();
+	if (this->outFile.is_open())
+		this->outFile.close();
+}
+
 bool	Sed::setFile(std::string fileName)
 {
 	//добавить close, если open

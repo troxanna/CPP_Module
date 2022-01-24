@@ -17,7 +17,7 @@ private:
 
 public:
 	Sed( void ) {};
-	~Sed( void ) {};
+	~Sed( void );
 	bool	setFile(std::string fileName);
 	bool	replace( std::string strTo, std::string strFrom );
 };
