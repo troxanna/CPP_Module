@@ -5,15 +5,17 @@ Fixed::Fixed( void ): value(0)
 	std::cout << "Default constructor called\n"; 
 };
 
-Fixed::Fixed( const int value ) : value(value << bits)
+Fixed::Fixed( const int value ) 
 { 
 	std::cout << "Default constructor called\n"; 
+	this->value = value << bits;
 
 };
 
-Fixed::Fixed( const float value ) : value(static_cast<int>((value) * (1 << bits)))
+Fixed::Fixed( const float value )
 { 
 	std::cout << "Default constructor called\n"; 
+	this->value = static_cast<int>((value) * (1 << bits));
 
 };
 
