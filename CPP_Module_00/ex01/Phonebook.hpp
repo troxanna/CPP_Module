@@ -6,18 +6,15 @@
 
 class Contact
 {
-	//public:
-	// Contact(): f_name(0), l_name(0), nickname(0), p_number(0), secret(0)
-	// {};
 	public:
-	Contact(): 
-	f_name(std::string()),
-	l_name(std::string()),
-	nickname(std::string()),
-	p_number(std::string()),
-	secret(std::string()), 
-	id(0)
-	{};
+	Contact(): f_name(std::string()),
+				l_name(std::string()),
+				nickname(std::string()),
+				p_number(std::string()),
+				secret(std::string()), 
+				id(0)
+				{};
+				
 	std::string f_name;
 	std::string l_name;
 	std::string nickname;
@@ -34,10 +31,8 @@ class Contact
 class Phonebook
 {
 	public:
-	Phonebook(size_t size = 8) : size(size),
-			count(0), list(new Contact [size])
-	{};
-	~Phonebook() { delete [] list; }
+	Phonebook(size_t size = 8) : size(size), count(0) {};
+	~Phonebook() { }
 
 	void	add( void );
 	void	print_list( void );
@@ -47,7 +42,7 @@ class Phonebook
 	std::string	_cat_string(std::string s);
 	size_t size;
 	int	count;
-	Contact *list;
+	Contact list[8];
 };
 
 

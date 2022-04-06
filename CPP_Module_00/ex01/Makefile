@@ -1,7 +1,7 @@
 NAME = phonebook
-CPP_FILE = main.cpp phonebook.cpp
-INC_FILE = phonebook.hpp
-CFLAGS = -Wall -Wextra -Werror
+CPP_FILE = main.cpp Phonebook.cpp
+INC_FILE = Phonebook.hpp
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
