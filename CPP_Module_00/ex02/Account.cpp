@@ -44,7 +44,6 @@ Account::~Account( void )
 
 void	Account::_displayTimestamp( void )
 {
-	//разобраться
 	std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
 	std::time_t time_now = std::chrono::system_clock::to_time_t(now);
 
