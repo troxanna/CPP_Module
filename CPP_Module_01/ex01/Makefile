@@ -1,7 +1,7 @@
 NAME = MoarBrainz!
 CPP_FILE = main.cpp ZombieHorde.cpp Zombie.cpp
 INC_FILE = Zombie.hpp
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 

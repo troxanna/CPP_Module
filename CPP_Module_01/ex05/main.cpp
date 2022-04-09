@@ -1,9 +1,9 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 
 int	main( void )
 {
-	Karen a;
-	a.complain("error");
+	Harl a;
+	a.complain("info");
 	return (0);
 }

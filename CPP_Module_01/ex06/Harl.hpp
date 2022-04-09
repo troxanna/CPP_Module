@@ -3,9 +3,9 @@
 #include <iostream>
 #include <string>
 
-//typedef void (Karen::*ptrFunc)();
+//typedef void (Harl::*ptrFunc)();
 
-class Karen
+class Harl
 {
 
 private:
@@ -13,11 +13,12 @@ private:
 	void	info( void );
 	void	warning( void );
 	void	error( void );
-	void (Karen::*ptrFunc[4])();
+	void	other( void );
+	void (Harl::*ptrFunc[5])();
+	static std::string levels[4];
 
 public:
-	static std::string levels[4];
 	void complain( const std::string& level );
-	Karen( void );
-	~Karen() {};
+	Harl( void );
+	~Harl() {};
 };

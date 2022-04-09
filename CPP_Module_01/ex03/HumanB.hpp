@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Weapon.hpp"
 
 class HumanB
@@ -7,8 +9,8 @@ private:
 	Weapon	*w;
 
 public:
-	HumanB( std::string	name ) : name(name), w(nullptr) {};
-	~HumanB() {  };
+	HumanB( std::string	name );
+	~HumanB();
 	void	attack( void );
-	void	setWeapon( Weapon & w ) { this->w = &w; };
+	void	setWeapon( Weapon & w );
 };

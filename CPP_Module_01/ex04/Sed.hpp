@@ -13,12 +13,12 @@ private:
 	std::fstream inFile;
 	std::fstream outFile;
 
-	char * str_replace( std::string &buf );
+	char * strReplace( std::string &buf );
 
 public:
 	Sed( void ) {};
 	~Sed( void );
-	bool	setFile(std::string fileName);
+	bool	setFile( std::string fileName );
 	bool	replace( std::string strTo, std::string strFrom );
 };
 

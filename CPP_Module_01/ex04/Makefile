@@ -1,6 +1,6 @@
 NAME = replace
 CPP_FILE = main.cpp Sed.cpp
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 

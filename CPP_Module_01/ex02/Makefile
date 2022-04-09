@@ -1,6 +1,6 @@
 NAME = HI_THIS_IS_BRAIN
 CPP_FILE = main.cpp 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 

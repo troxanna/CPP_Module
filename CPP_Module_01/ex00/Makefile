@@ -1,7 +1,7 @@
 NAME = BraiiiiiiinnnzzzZ
 CPP_FILE = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 INC_FILE = Zombie.hpp
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 

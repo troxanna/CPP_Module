@@ -1,6 +1,6 @@
-NAME = karen
-CPP_FILE = main.cpp Karen.cpp
-CFLAGS = -Wall -Wextra -Werror
+NAME = Harl
+CPP_FILE = main.cpp Harl.cpp
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
