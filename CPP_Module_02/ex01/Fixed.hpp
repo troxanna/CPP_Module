@@ -1,4 +1,6 @@
+#pragma once
 #include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -9,7 +11,6 @@ public:
 	Fixed( void );
 	explicit Fixed( const int value );
 	explicit Fixed( const float value );
-	//Fixed(Fixed & other);
 	Fixed(const Fixed & other);
 	Fixed & operator=(Fixed other);
 	~Fixed( void );

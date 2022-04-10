@@ -1,7 +1,7 @@
 NAME = fixed_02
 CPP_FILE = main.cpp Fixed.cpp 
-CFLAGS = -Wall -Wextra -Werror
-INC_FILE = Weapon.hpp
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+INC_FILE = Fixed.hpp
 
 all: $(NAME)
 

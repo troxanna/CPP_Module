@@ -11,7 +11,7 @@ Fixed::Fixed( const int value ) : value(value << bits)
 
 };
 
-Fixed::Fixed( const float value ) : value(static_cast<int>((value) * (1 << bits)))
+Fixed::Fixed( const float value ) : value(static_cast<int>(roundf(((value) * (1 << bits)))))
 { 
 	std::cout << "Default constructor called\n"; 
 

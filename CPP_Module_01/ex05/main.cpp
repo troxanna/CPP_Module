@@ -4,6 +4,6 @@
 int	main( void )
 {
 	Harl a;
-	a.complain("info");
+	a.complain("error");
 	return (0);
 }

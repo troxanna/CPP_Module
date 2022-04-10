@@ -26,6 +26,13 @@ public:
 	static const Fixed & max(const Fixed & f1, const Fixed & f2);
 	static Fixed & min( Fixed & f1,  Fixed & f2 );
 	static Fixed & max( Fixed & f1,  Fixed & f2 );
+
+	bool operator> (int value);
+	bool operator<= (int value);
+	bool operator< (int value);
+	bool operator>= (int value);
+	bool operator== (int value);
+	bool operator!= (int value);
 };
 
 std::ostream & operator<<(std::ostream &os, Fixed const& f);

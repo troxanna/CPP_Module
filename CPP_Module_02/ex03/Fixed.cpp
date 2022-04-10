@@ -1,19 +1,16 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed( void ): value(0) 
-{ 
-};
+{ };
 
 Fixed::Fixed( const int value ) 
 { 
 	this->value = value << bits;
-
 };
 
 Fixed::Fixed( const float value )
 { 
 	this->value = static_cast<int>(roundf(((value) * (1 << bits))));
-
 };
 
 Fixed::Fixed(const Fixed & other)
@@ -28,8 +25,7 @@ Fixed & Fixed::operator=(Fixed other)
 }
 
 Fixed::~Fixed( void )
-{
-}
+{ }
 
 int Fixed::getRawBits( void ) const
 {
@@ -52,7 +48,7 @@ float Fixed::toFloat(void) const{
 Fixed& Fixed::operator++()
 {
     this->setRawBits(this->getRawBits() + 1);
-
+ 
     return *this;
 }
  
@@ -66,9 +62,9 @@ Fixed& Fixed::operator--()
 Fixed Fixed::operator++(int)
 {
 	Fixed temp(*this);
-	this->setRawBits(this->getRawBits() + 1);
-
-	return temp;
+ 
+     ++(*this); 
+    return temp;
 }
  
 Fixed Fixed::operator--(int)
@@ -165,4 +161,34 @@ Fixed & Fixed::max(Fixed & f1, Fixed & f2)
 		return (f1);
 	else
 		return (f2);
+}
+
+bool Fixed::operator> (int value)
+{
+    return this->toFloat() > static_cast<float>(value);
+}
+
+bool Fixed::operator< (int value)
+{
+     return this->toFloat() < static_cast<float>(value);
+}
+ 
+bool Fixed::operator>= (int value)
+{
+    return this->toFloat() >= static_cast<float>(value);
+}
+ 
+bool Fixed::operator<= (int value)
+{
+    return this->toFloat() <= static_cast<float>(value);
+}
+
+bool Fixed::operator== (int value)
+{
+    return (this->toFloat() == static_cast<float>(value));
+}
+ 
+bool Fixed::operator!= (int value)
+{
+    return !(this->toFloat() == static_cast<float>(value));
 }
