@@ -3,15 +3,15 @@
 
 FragTrap::FragTrap( std::string name ) : ClapTrap(name)
 {
-	std::cout << "Frag Trap " << get_name() << " created\n";
-	set_hitPoints(100);
-	set_energyPoints(100);
-	set_damage(30);
+	std::cout << "Frag Trap " << getName() << " created\n";
+	setHitPoints(100);
+	setEnergyPoints(100);
+	setDamage(30);
 };
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Frag Trap " << get_name() << " dead\n";
+	std::cout << "Frag Trap " << getName() << " dead\n";
 }
 
 void FragTrap::highFivesGuys()

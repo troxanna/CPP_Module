@@ -1,11 +1,20 @@
-class DiamondTrap: public virtual ScavTrap, public virtual FragTrap
+#pragma once
+#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
+
+//а разве здесь делаем virtual? 
+
+
+//class DiamondTrap: public virtual ScavTrap, virtual public FragTrap
+class DiamondTrap: public ScavTrap, virtual FragTrap
 {
 private:
-	DiamondTrap(/* args */);
+	DiamondTrap( void );
 public:
-	DiamondTrap( std::string name );
-	~DiamondTrap();
+	explicit DiamondTrap( std::string name );
+	virtual ~DiamondTrap();
 	void highFivesGuys();
-	void DiamondTrap::whoAmI( void );
+	void whoAmI( void );
 };
  

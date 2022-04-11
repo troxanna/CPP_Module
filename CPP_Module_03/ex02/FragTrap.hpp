@@ -1,10 +1,10 @@
 class FragTrap: public ClapTrap
 {
 private:
-	FragTrap(/* args */);
+	FragTrap( void );
 public:
-	FragTrap( std::string name );
-	~FragTrap();
+	explicit FragTrap( std::string name );
+	virtual ~FragTrap();
 	void highFivesGuys();
 };
  

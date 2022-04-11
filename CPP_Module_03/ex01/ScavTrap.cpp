@@ -1,30 +1,18 @@
 #include "ScavTrap.hpp"
 
+//конструктор копирования и перегруженный оператор присваивания наследуем от ClapTrap
+
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 {
-	std::cout << "Scav Trap " << get_name() << " created\n";
-	set_hitPoints(100);
-	set_energyPoints(50);
-	set_damage(20);
+	std::cout << "Scav Trap " << getName() << " created\n";
+	setHitPoints(100);
+	setEnergyPoints(50);
+	setDamage(20);
 };
-
-ScavTrap::ScavTrap( const ScavTrap & other )
-{
-
-}
-
-ScavTrap & ScavTrap::operator=( const ScavTrap &other )
-{
-	this->m_name = other.m_name;
-	this->m_hitPoints = other.m_hitPoints;
-	this->m_energyPoints = other.m_energyPoints;
-	this->m_damage = other.m_damage;
-	return (*this);
-}
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "Scav Trap " << get_name() << " dead\n";
+	std::cout << "Scav Trap " << getName() << " dead\n";
 }
 
 void ScavTrap::guardGate()

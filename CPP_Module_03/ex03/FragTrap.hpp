@@ -1,10 +1,13 @@
-class FragTrap: public ClapTrap
+#pragma once
+#include "ClapTrap.hpp"
+
+class FragTrap: virtual public ClapTrap
 {
 private:
-	FragTrap(/* args */);
+	FragTrap( void );
 public:
-	FragTrap( std::string name );
-	~FragTrap();
+	explicit FragTrap( std::string name );
+	virtual ~FragTrap();
 	void highFivesGuys();
 };
  

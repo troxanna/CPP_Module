@@ -1,14 +1,13 @@
+#pragma once
 #include "ClapTrap.hpp"
 
-class ScavTrap: public  ClapTrap
+class ScavTrap: public ClapTrap
 {
 private:
-	ScavTrap(/* args */);
+	ScavTrap( void );
 public:
-	ScavTrap( std::string name );
-	ScavTrap & operator=( const ScavTrap &other );
-	ScavTrap( const ScavTrap & other );
-	~ScavTrap();
+	explicit ScavTrap( std::string name );
+	virtual ~ScavTrap();
 	void guardGate();
 };
  

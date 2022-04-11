@@ -1,7 +1,7 @@
-NAME = cpp03_01
-CPP_FILE = main.cpp ClapTrap.cpp ScavTrap.cpp 
-CFLAGS = -Wall -Wextra -Werror
-INC_FILE = ClapTrap.hpp ScavTrap.hpp 
+NAME = ex02
+CPP_FILE = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp 
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+INC_FILE = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 all: $(NAME)
 

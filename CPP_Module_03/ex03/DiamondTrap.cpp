@@ -3,17 +3,18 @@
 #include "ClapTrap.hpp"
 #include "DiamondTrap.hpp"
 
+//DiamondTrap::DiamondTrap( std::string name ) : ScavTrap(name), FragTrap(name)
 DiamondTrap::DiamondTrap( std::string name ) : ScavTrap(name), FragTrap(name)
 {
-	std::cout << "Diamond Trap " << ClapTrap::get_name() << " created\n";
-	FragTrap::set_hitPoints(FragTrap::get_hitPoints());
-	ScavTrap::set_energyPoints(ScavTrap::get_energyPoints());
- 	FragTrap::set_damage(FragTrap::get_damage());
+	std::cout << "Diamond Trap " << ClapTrap::getName() << " created\n";
+	FragTrap::setHitPoints(FragTrap::getHitPoints());
+	ScavTrap::setEnergyPoints(ScavTrap::getEnergyPoints());
+ 	FragTrap::setDamage(FragTrap::getDamage());
 };
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "Diamond Trap " << ClapTrap::get_name() << " dead\n";
+	std::cout << "Diamond Trap " << ClapTrap::getName() << " dead\n";
 }
 
 void DiamondTrap::whoAmI( void )

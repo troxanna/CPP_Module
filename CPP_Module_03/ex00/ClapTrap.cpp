@@ -31,6 +31,8 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (m_energyPoints < 1)
 		std::cout << m_name << " doesn't have enough energy \n";
+	else if (m_hitPoints < 1)
+		std::cout << m_name << " has no hit points \n";
 	else
 	{
 		std::cout << "Clap Trap " << m_name << " attacks " << target <<", causing " << m_damage << " points of damage!\n";

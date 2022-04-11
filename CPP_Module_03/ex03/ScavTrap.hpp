@@ -1,10 +1,13 @@
-class ScavTrap: public ClapTrap
+#pragma once
+#include "ClapTrap.hpp"
+
+class ScavTrap: virtual public ClapTrap
 {
 private:
-	ScavTrap(/* args */);
+	ScavTrap( void );
 public:
-	ScavTrap( std::string name );
-	~ScavTrap();
+	explicit ScavTrap( std::string name );
+	virtual ~ScavTrap();
 	void guardGate();
 };
  

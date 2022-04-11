@@ -1,6 +1,6 @@
-NAME = cpp03_00
+NAME = ex00
 CPP_FILE = main.cpp ClapTrap.cpp 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 INC_FILE = ClapTrap.hpp 
 
 all: $(NAME)
