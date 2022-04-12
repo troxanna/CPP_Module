@@ -22,10 +22,10 @@ public:
 	unsigned int getEnergyPoints( void ) const;
 	unsigned int getDamage( void ) const;
 	std::string getName( void ) const;
-	//разобраться, почему деструтор виртуальный
 	virtual ~ClapTrap();
 	void attack( const std::string& target );
 	void takeDamage( unsigned int amount );
 	void beRepaired( unsigned int amount );
+	void	getInfo();
 };
 

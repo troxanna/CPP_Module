@@ -83,10 +83,14 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+	if (m_hitPoints < 1)
+	{
+		std::cout << "Clap Trap " << m_name << " is already dead\n";
+		return ;
+	}
 	std::cout << "Clap Trap " << m_name << " lost " << amount <<", hit points\n";
-	(m_hitPoints - amount < 0) ? m_hitPoints = 0 : m_hitPoints -= amount;
+	((static_cast<int>(m_hitPoints)) - static_cast<int>(amount) < 0) ? m_hitPoints = 0 : m_hitPoints -= amount;
 }
-
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
@@ -99,3 +103,13 @@ void ClapTrap::beRepaired(unsigned int amount)
 		m_hitPoints += amount;
 	}
 }
+
+void	ClapTrap::getInfo()
+{
+	std::cout << "Name: " << this->getName() << std::endl; 
+	std::cout << "Hit points: " <<  this->getHitPoints() << std::endl; 
+	std::cout << "Energy points: " <<  this->getEnergyPoints() << std::endl; 
+	std::cout << "Damage: " <<  this->getDamage() << std::endl; 
+	std::cout << std::endl;
+}
+

@@ -4,7 +4,7 @@
 #include "DiamondTrap.hpp"
 
 //DiamondTrap::DiamondTrap( std::string name ) : ScavTrap(name), FragTrap(name)
-DiamondTrap::DiamondTrap( std::string name ) : ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap( std::string name ) : name(name + "_clap_name"), ClapTrap(name), ScavTrap(name), FragTrap(name)
 {
 	std::cout << "Diamond Trap " << ClapTrap::getName() << " created\n";
 	FragTrap::setHitPoints(FragTrap::getHitPoints());

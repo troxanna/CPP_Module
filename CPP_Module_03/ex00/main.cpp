@@ -2,12 +2,17 @@
 
 int	main()
 {
-	ClapTrap test("Clap");
-	test.beRepaired(2);
-	test.attack("Trap");
-	test.takeDamage(3);
-	test.beRepaired(2);
-	test.takeDamage(10);
+	ClapTrap clap("Clap");
+	ClapTrap trap("Trap");
+    clap.setDamage(3);
+    clap.getInfo();
+	trap.getInfo();
+	clap.attack(trap.getName());
+	trap.takeDamage(3);
+	trap.getInfo();
+    clap.getInfo();
+    trap.beRepaired(3);
+    trap.getInfo();
 	return (0);
 }
 

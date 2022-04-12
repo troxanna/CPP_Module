@@ -1,11 +1,10 @@
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main()
 {
-	ClapTrap a("test");
-	a.attack("rest");
-	ScavTrap b("test");
+	ClapTrap clap("Clap");
+	DiamondTrap diamond("Diamond");
+
 	return (0);
 }
 
