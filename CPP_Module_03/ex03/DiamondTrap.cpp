@@ -9,7 +9,7 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap("DiamondTrap"), ScavTrap("DiamondTra
 	std::cout << "DiamondTrap constructor called\n";
 }
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name), ScavTrap(name), FragTrap(name), _name(name + "_clap_name")
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
 	std::cout << "Diamond Trap " << ClapTrap::getName() << " created\n";
 	FragTrap::setHitPoints(FragTrap::getHitPoints());
