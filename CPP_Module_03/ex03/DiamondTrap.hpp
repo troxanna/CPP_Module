@@ -8,9 +8,9 @@
 class DiamondTrap: public ScavTrap, public FragTrap
 {
 private:
-	std::string name;
-	//DiamondTrap( void );
+	std::string _name;
 public:
+	DiamondTrap( void );
 	explicit DiamondTrap( std::string name );
 	virtual ~DiamondTrap();
 	void highFivesGuys();

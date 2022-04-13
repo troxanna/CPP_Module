@@ -2,9 +2,10 @@
 
 int	main()
 {
-	ClapTrap clap("Clap");
 	DiamondTrap diamond("Diamond");
-
+	diamond.ScavTrap::attack(diamond.getName());
+	diamond.takeDamage(30);
+	diamond.getInfo();
 	return (0);
 }
 
