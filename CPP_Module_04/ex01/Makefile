@@ -1,7 +1,7 @@
-NAME = ex00
-CPP_FILE = main.cpp 
+NAME = ex01
+CPP_FILE = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-INC_FILE = 
+INC_FILE = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 all: $(NAME)
 

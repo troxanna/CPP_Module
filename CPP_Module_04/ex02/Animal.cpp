@@ -1,14 +1,8 @@
 #include "Animal.hpp"
 
-Animal::Animal( void ) : type(std::string())
+Animal::Animal( ) : type(std::string())
 {
     std::cout << "Animal created\n";
-}
-
-
-Animal::~Animal()
-{
-    std::cout << "Animal destroyed\n";
 }
 
 Animal::Animal(const Animal & other)
@@ -22,12 +16,12 @@ Animal & Animal::operator=(const Animal & other)
     return (*this);
 }
 
+Animal::~Animal()
+{
+    std::cout << "Animal destroyed\n";
+}
+
 const std::string & Animal::getType() const
 {
     return (this->type);
-}
-
-void Animal::makeSound() const
-{
-    std::cout << "Silence sounds\n";
 }
