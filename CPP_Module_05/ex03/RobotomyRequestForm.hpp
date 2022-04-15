@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Form.hpp"
 
 class RobotomyRequestForm : public Form
