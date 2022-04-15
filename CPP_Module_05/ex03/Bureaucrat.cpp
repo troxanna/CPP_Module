@@ -88,3 +88,21 @@ const char*	Bureaucrat::GradeTooLowException::what() const throw()
 Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {};
 
 Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {};
+
+void	Bureaucrat::executeForm(Form const & form) const
+{
+    try
+	{
+		form.execute(*this);
+		std::cout << "Bureaucrat executed " << form.getName() << std::endl;
+	}
+    catch(const Form::UnableExecuteFormException& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+	catch(const std::exception& e)
+	{
+		std::cout << "Bureaucrat couldn't execute form.\n";
+		std::cerr << e.what() << '\n';
+	}
+}

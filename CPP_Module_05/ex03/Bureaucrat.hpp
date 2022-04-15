@@ -1,25 +1,29 @@
 #pragma once
-#include "Bureaucrat.hpp"
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <fstream>
+#include "Form.hpp"
 
-class Bureaucrat;
+class Form;
+class UnableExecuteFormException;
 
-class Form
+class Bureaucrat
 {
 private:
     const std::string name;
-    bool isSigned;
-    const int signGrade;
-    const int executeGrade;
+    int grade;
 public:
-    Form( const std::string & name, int signGrade, int executeGrade );
-    Form( const Form & other );
-    Form& operator=( const Form & other );
+    Bureaucrat( const std::string & name, int grade );
+    Bureaucrat( const Bureaucrat & other );
+    Bureaucrat& operator=( const Bureaucrat & other );
     const std::string & getName() const;
-    int getSignGrade() const;
-    int getExecuteGrade() const;
-    bool getIsSigned() const;
-    void    beSigned(const Bureaucrat & obj);
-    ~Form();
+    int getGrade() const;
+    ~Bureaucrat();
+    void     incrementGrade(int n);
+    void     decrementGrade(int n);
+	void signForm(Form *form);
+	void	executeForm(Form const & form) const;
 
     class GradeTooHighException : public std::exception
 	{
@@ -38,10 +42,11 @@ public:
 		std::string	error;
 	public:
 		explicit GradeTooLowException( std::string str );
+        //как деструктор работает?
 		virtual ~GradeTooLowException() throw();
         // const std::string & getError() { return error; }
 		virtual const char*	what() const throw();
 	};
 };
 
-std::ostream& operator<<(std::ostream &out, const Form &object);
+std::ostream& operator<< (std::ostream &out, const Bureaucrat &obj);

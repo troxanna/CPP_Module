@@ -19,6 +19,7 @@ public:
     int getExecuteGrade() const;
     bool getIsSigned() const;
     void    beSigned(const Bureaucrat & obj);
+	virtual void	execute(Bureaucrat const &exec) const = 0;
     ~Form();
 
     class GradeTooHighException : public std::exception
@@ -40,6 +41,16 @@ public:
 		explicit GradeTooLowException( std::string str );
 		virtual ~GradeTooLowException() throw();
         // const std::string & getError() { return error; }
+		virtual const char*	what() const throw();
+	};
+
+	class UnableExecuteFormException : public std::exception
+	{
+	private:
+		std::string	error;
+	public:
+		explicit UnableExecuteFormException( std::string str );
+		virtual ~UnableExecuteFormException() throw();
 		virtual const char*	what() const throw();
 	};
 };

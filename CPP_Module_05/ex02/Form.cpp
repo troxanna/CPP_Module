@@ -87,3 +87,13 @@ const char*	Form::GradeTooLowException::what() const throw()
 Form::GradeTooHighException::~GradeTooHighException() throw() {};
 
 Form::GradeTooLowException::~GradeTooLowException() throw() {};
+
+Form::UnableExecuteFormException::UnableExecuteFormException( std::string str ) : error(str)
+{}
+
+const char*	Form::UnableExecuteFormException::what() const throw()
+{
+    return error.c_str();
+}
+
+Form::UnableExecuteFormException::~UnableExecuteFormException() throw() {};

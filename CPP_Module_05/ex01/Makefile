@@ -1,7 +1,7 @@
-NAME = ex00
-CPP_FILE = main.cpp Bureaucrat.cpp
+NAME = ex01
+CPP_FILE = main.cpp Bureaucrat.cpp Form.cpp
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-INC_FILE = Bureaucrat.hpp
+INC_FILE = Bureaucrat.hpp Form.hpp
 
 all: $(NAME)
 
