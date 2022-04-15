@@ -11,7 +11,6 @@ private:
     Form*   shrubberyCreation(std::string& target);
     Form*   robotomyRequest(std::string& target);
     Form*   presidentialPardon(std::string& target);
-    Form*	robotomy(std::string &target);
 public:
     Intern( void );
     ~Intern();

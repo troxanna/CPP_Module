@@ -31,7 +31,7 @@ void    Form::beSigned(const Bureaucrat & obj)
 		//std::cout << "Form " << getName() << " has been signed" << std::endl;
 		return ;
 	}
-	if (obj.getGrade() > this->getSignGrade()) {
+	if (obj.getGrade() < this->getSignGrade()) {
 		throw GradeTooHighException("Bureaucrat have a too low grade");
 	}
 	this->isSigned = true;

@@ -22,7 +22,7 @@ public:
     ~Bureaucrat();
     void     incrementGrade(int n);
     void     decrementGrade(int n);
-	void signForm(Form *form);
+	void	signForm(Form *form) const;
 	void	executeForm(Form const & form) const;
 
     class GradeTooHighException : public std::exception
@@ -42,7 +42,6 @@ public:
 		std::string	error;
 	public:
 		explicit GradeTooLowException( std::string str );
-        //как деструктор работает?
 		virtual ~GradeTooLowException() throw();
         // const std::string & getError() { return error; }
 		virtual const char*	what() const throw();

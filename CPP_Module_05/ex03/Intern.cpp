@@ -36,7 +36,7 @@ Form*   Intern::presidentialPardon(std::string& target) {
 Form*	Intern::makeForm(std::string fName, std::string target)
 {
     Form*	tmp = nullptr;
-    Form*(Intern::*ptr[3])(std::string &target) = {&Intern::robotomy, &Intern::robotomyRequest,
+    Form*(Intern::*ptr[3])(std::string &target) = {&Intern::shrubberyCreation, &Intern::robotomyRequest,
 		&Intern::presidentialPardon};
     try
     {
