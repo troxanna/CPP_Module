@@ -1,5 +1,5 @@
 NAME = ex00
-CPP_FILE = reinterpret.cpp 
+CPP_FILE = main.cpp
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 INC_FILE = 
 
