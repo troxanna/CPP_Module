@@ -1,4 +1,4 @@
-#include "Span.hpp"
+#include "MutantStack.hpp"
 #include <vector>
 #include <list>
 #include <string>
@@ -7,46 +7,59 @@
 
 int main() 
 {
-	Span sp = Span(15);
-	sp.addNumber(6);
-	sp.addNumber(3);
-	sp.addNumber(17);
-	sp.addNumber(9);
-	sp.addNumber(11);
-	std::cout << "***   simple addition   ***\n";
-	std::cout << "Min different between items: " << sp.shortestSpan() << std::endl;
-	std::cout << "Max different between items: " << sp.longestSpan() << std::endl;
-	std::cout <<std::endl;
-	
-	std::vector<int> v;
+	// MutantStack<int> mstack;
+	// mstack.push(5);
+	// mstack.push(17);
+	// std::cout << mstack.top() << std::endl;
+	// mstack.pop();
+	// std::cout << mstack.size() << std::endl;
+	// mstack.push(3);
+	// mstack.push(5);
+	// mstack.push(737);
+	// //[...]
+	// mstack.push(0);
+	// MutantStack<int>::iterator it = mstack.begin();
+	// MutantStack<int>::iterator ite = mstack.end();
+	// ++it;
+	// --it;
+	// while (it != ite)
+	// {
+	// 	std::cout << *it << std::endl;
+	// 	++it;	
+	// }
+	// std::stack<int> s(mstack);
+	// return (0);
+
+	MutantStack<int> mstack;
+
 	srand(time(NULL));
 	for (int i = 0; i < MAX_VAL; i++)
     {
-        const int value = rand() % 10;
-        v.push_back(value);
+        const int value = rand() % 100;
+        mstack.push(value);
     }
-	try
-	{
-		std::cout << "***   iterators addition  ***\n";
-		// std::cout << v.end() - v.begin() <<std::endl;
-		sp.addNumber(v.begin(), v.end());
-		std::cout << "Min different between items: " << sp.shortestSpan() << std::endl;
-		std::cout << "Max different between items: " << sp.longestSpan() << std::endl;
-		std::cout <<std::endl;
+	std::cout << "Print stack!\n";
+	for(MutantStack<int>::iterator begin = mstack.begin(); begin != mstack.end(); ++begin) {
+		std::cout << *begin << ' ';
 	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
+	std::cout << std::endl;
+	std::cout << "Size: " << mstack.size() << std::endl;
+	for (size_t i = 0; i < 5; i++)
+		mstack.pop();
+	std::cout << "Print stack after 4 delete element!\n";
+	for(MutantStack<int>::iterator begin = mstack.begin(); begin != mstack.end(); ++begin) {
+		std::cout << *begin << ' ';
 	}
-	try
+	std::cout << std::endl;
+	for (size_t i = 0; i < MAX_VAL; i++)
 	{
-		std::cout << "***   exeption  ***\n";
-		sp.addNumber(1);
+		const int value = rand() % 100;
+        mstack.push(value);
 	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
+	std::cout << "Print stack after 10 add elements!\n";
+	for(MutantStack<int>::iterator begin = mstack.begin(); begin != mstack.end(); ++begin) {
+		std::cout << *begin << ' ';
 	}
-	std::cout <<std::endl;
-	return (0);
+	std::cout << std::endl;
+	std::cout << "Size: " <<mstack.size() << std::endl;
 }

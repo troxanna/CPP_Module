@@ -1,7 +1,7 @@
-NAME = ex01
-CPP_FILE = main.cpp span.cpp
+NAME = ex02
+CPP_FILE = MutantStack.cpp main.cpp
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-INC_FILE = span.hpp
+INC_FILE = MutantStack.hpp
 
 all: $(NAME)
 

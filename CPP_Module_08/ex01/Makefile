@@ -1,5 +1,5 @@
 NAME = ex01
-CPP_FILE = main.cpp span.cpp
+CPP_FILE = main.cpp Span.cpp
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 INC_FILE = span.hpp
 
