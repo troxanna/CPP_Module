@@ -26,15 +26,19 @@ public:
 	}
 	Array& operator=( const Array& other ) 
 	{
+		T *tmp;
+
+		tmp = this->data;
 		if (this == &other) 
 			return *this;
-		if (this->data)
-			delete [] this->data;
 		this->data = new T[other.n];
+		if (tmp)
+			delete [] tmp;
 		this->n = other.n;
 		for (size_t i = 0; i < other.n; i++) {
 			this->data[i] = other.data[i];
 		}
+		return (*this);
 	}
 	const T& operator[](size_t index) const;
 	T& operator[](size_t index);
