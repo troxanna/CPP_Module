@@ -1,3 +1,4 @@
+#pragma once
 #include "ASpell.hpp"
 
 class Fwoosh : public ASpell
@@ -5,7 +6,7 @@ class Fwoosh : public ASpell
 
 public:
 	Fwoosh(/* args */);
-	~Fwoosh();
+	virtual ~Fwoosh();
 
-	ASpell *Fwoosh::clone() const;
+	virtual ASpell *clone() const;
 };

@@ -9,6 +9,6 @@ int main()
     jack->introduce();
     jack->setTitle("the Mighty");
     jack->introduce();  
-    delete jack;    
+    delete jack;   
     return (0);
 }

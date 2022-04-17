@@ -42,3 +42,41 @@ void Warlock::introduce() const
 {
     std::cout << this->name << ": I am " <<  this->name << ", " << this->title << "!" << std::endl;
 }
+
+void    Warlock::learnSpell(ASpell *ptr)
+{
+    if(ptr)
+    {
+        for (std::vector<ASpell *>::iterator it = this->spells.begin(); it != this->spells.end(); it++)
+        {
+            if ((*it)->getName() == ptr->getName())
+                return ;
+        }
+        this->spells.push_back(ptr->clone());
+        std::cout << ptr->getName() << std::endl;
+    }
+}
+
+void    Warlock::forgetSpell(std::string const &spellName)
+{
+    for (std::vector<ASpell *>::iterator it = this->spells.begin(); it != this->spells.end(); it++)
+    {
+        if ((*it)->getName() == spellName)
+        {
+            delete *it;
+            it = this->spells.erase(it);
+        }
+    }
+}
+
+void    Warlock::launchSpell(std::string const &spellName, ATarget const &target)
+{
+    for (std::vector<ASpell *>::iterator it = this->spells.begin(); it != this->spells.end(); it++)
+    {
+        if ((*it)->getName() == spellName)
+        {
+            (*it)->launch(target);
+            return ;
+        }
+     }
+}
