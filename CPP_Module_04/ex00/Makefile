@@ -6,7 +6,7 @@ INC_FILE = Animal.hpp Dog.hpp Cat.hpp
 all: $(NAME)
 
 $(NAME): $(CPP_FILE)
-	clang++ $(CFLAGS) -o $(NAME) $(CPP_FILE)
+	c++ $(CFLAGS) -o $(NAME) $(CPP_FILE)
 
 clean:
 	@rm -f *.o

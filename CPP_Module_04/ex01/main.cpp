@@ -25,9 +25,9 @@ int main()
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
-    i->setIdea("Wiskas");
-    i->setIdea("Milk");
-    i->showIdeas();
+	i->getBrain()->setIdea("Wiskas");
+	i->getBrain()->setIdea("Milk");
+    i->getBrain()->showIdeas();
 
     delete j;
     delete i;

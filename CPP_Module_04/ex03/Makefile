@@ -1,7 +1,7 @@
-NAME = ex02
+NAME = ex03
 CPP_FILE = *.cpp
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-INC_FILE = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+INC_FILE = *.hpp
 
 all: $(NAME)
 

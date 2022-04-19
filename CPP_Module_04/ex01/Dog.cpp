@@ -20,27 +20,33 @@ void Dog::makeSound() const
 
 Dog::Dog(const Dog & other)
 {
-    this->type = other.type;
-    this->brain = new Brain(*other.brain);
+    *this = other;
 }
 
 Dog & Dog::operator=(const Dog & other)
 {
+    Brain *ptr;
     if (this == &other)
         return (*this);
     this->type = other.type;
-    if (this->brain)
-        delete this->brain;
+    ptr = this->brain;
     this->brain = new Brain(*other.brain);
+    if (ptr && this->brain)
+        delete ptr;
     return (*this);
 }
 
-void Dog::setIdea(const std::string& str) const
+Brain* Dog::getBrain() const
 {
-	this->brain->setIdea(str);
+    return (this->brain);
 }
 
-void Dog::showIdeas() const
-{
-    this->brain->showIdeas();
-}
+// void Dog::setIdea(const std::string& str) const
+// {
+// 	this->brain->setIdea(str);
+// }
+
+// void Dog::showIdeas() const
+// {
+//     this->brain->showIdeas();
+// }

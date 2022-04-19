@@ -20,27 +20,33 @@ void Cat::makeSound() const
 
 Cat::Cat(const Cat & other)
 {
-    this->type = other.type;
-    this->brain = new Brain(*other.brain);
+    *this = other;
 }
 
 Cat & Cat::operator=(const Cat & other)
 {
+    Brain *ptr;
     if (this == &other)
         return (*this);
     this->type = other.type;
-    if (this->brain)
-        delete this->brain;
+    ptr = this->brain;
     this->brain = new Brain(*other.brain);
+    if (ptr && this->brain)
+        delete ptr;
     return (*this);
 }
 
-void Cat::setIdea(const std::string& str) const
+Brain* Cat::getBrain() const
 {
-	this->brain->setIdea(str);
+    return (this->brain);
 }
 
-void Cat::showIdeas() const
-{
-    this->brain->showIdeas();
-}
+// void Cat::setIdea(const std::string& str) const
+// {
+// 	this->brain->setIdea(str);
+// }
+
+// void Cat::showIdeas() const
+// {
+//     this->brain->showIdeas();
+// }

@@ -6,11 +6,11 @@ class Cure : public AMateria
 private:
     /* data */
 public:
-    Cure(/* args */);
+    Cure( void );
     Cure( const Cure & other);
     Cure& operator=( const Cure & other);
-    ~Cure();
+    virtual ~Cure();
     virtual void use(ICharacter& target);
-	virtual Cure* clone() const;
+	virtual AMateria* clone() const;
 };
 

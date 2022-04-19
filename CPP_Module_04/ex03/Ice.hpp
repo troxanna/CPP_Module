@@ -6,10 +6,10 @@ class Ice : public AMateria
 private:
     /* data */
 public:
-    Ice(/* args */);
+    Ice( void );
     Ice( const Ice & other);
     Ice& operator=( const Ice & other);
-    ~Ice();
+    virtual ~Ice();
     virtual void use(ICharacter& target);
 	virtual AMateria* clone() const;
 };

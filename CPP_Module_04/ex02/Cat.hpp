@@ -12,6 +12,7 @@ public:
     virtual void makeSound() const;
     Cat & operator=(const Cat & other);
     Cat(const Cat & other);
-    virtual void setIdea(const std::string& str) const;
-    virtual void showIdeas() const;
+    virtual Brain* getBrain() const;
+    // virtual void setIdea(const std::string& str) const;
+    // virtual void showIdeas() const;
 };

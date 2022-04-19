@@ -12,6 +12,7 @@ public:
     virtual void makeSound() const;
     Dog & operator=(const Dog & other);
     Dog(const Dog & other);
-    virtual void setIdea(const std::string& str) const;
-    virtual void showIdeas() const;
+    virtual Brain* getBrain() const;
+    // virtual void setIdea(const std::string& str) const;
+    // virtual void showIdeas() const;
 };

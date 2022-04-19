@@ -7,9 +7,9 @@ std::string const & AMateria::getType() const
     return (this->type);
 }
 
-void use(ICharacter& target)
+void AMateria::use(ICharacter& target)
 {
-    //Что туточки?
+    (void)target;
 }
 
 AMateria::AMateria(const AMateria & other)
