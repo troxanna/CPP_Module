@@ -4,7 +4,7 @@
 
 int main()
 {
-    Warlock richard("Richard", "the Titled");
+	Warlock richard("Richard", "the Titled");
 
   Dummy bob;
   Fwoosh* fwoosh = new Fwoosh();
@@ -12,10 +12,12 @@ int main()
   richard.learnSpell(fwoosh);
 
   richard.introduce();
-  //richard.launchSpell("Fwoosh", bob);
+  richard.launchSpell("Fwoosh", bob);
 
   richard.forgetSpell("Fwoosh");
-  std::cout << "Test\n";
-  //richard.launchSpell("Fwoosh", bob);   
-    return (0);
+  richard.launchSpell("Fwoosh", bob);
+
+  delete fwoosh;
+
+  return (0);
 }

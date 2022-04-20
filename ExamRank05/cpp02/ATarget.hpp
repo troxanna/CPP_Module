@@ -14,8 +14,8 @@ private:
 	ATarget( void );
 public:
 	ATarget( std::string type);
-	ATarget( const ATarget & other);
-	ATarget & operator=( const ATarget & other);
+	ATarget( ATarget const & other);
+	ATarget & operator=( ATarget const & other);
 	virtual ~ATarget();
 
 	const std::string & getType() const {return (this->type);};

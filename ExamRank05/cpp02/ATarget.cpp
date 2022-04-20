@@ -10,11 +10,11 @@ ATarget::~ATarget()
 	//std::cout << this->getName() << "My job here is done!\n";
 }
 
-ATarget::ATarget(const ATarget & other)
+ATarget::ATarget(ATarget const & other)
 {
 	*this = other;
 }
-ATarget & ATarget::operator=(const ATarget & other)
+ATarget & ATarget::operator=(ATarget const & other)
 {
 	if (this == &other)
 		return (*this);

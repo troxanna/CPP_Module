@@ -15,8 +15,8 @@ private:
 	ASpell( void );
 public:
 	ASpell( std::string name, std::string effects);
-	ASpell( const ASpell & other);
-	ASpell & operator=( const ASpell & other);
+	ASpell( ASpell const & other);
+	ASpell & operator=(ASpell const & other);
 	virtual ~ASpell();
 
 	const std::string & getName() const {return (this->name);};

@@ -1,11 +1,15 @@
 #ifndef WARLOCK_HPP
 # define WARLOCK_HPP
 
-#include <iostream>
+# include <iostream>
+# include "ASpell.hpp"
+# include "ATarget.hpp"
+# include "SpellBook.hpp"
 
 class Warlock
 {
 private:
+	SpellBook book;
 	std::string name;
 	std::string title;
 
@@ -21,6 +25,10 @@ public:
 
 	void	setTitle(const std::string & title) {this->title = title;};
 	void introduce() const;
+
+	void	learnSpell(ASpell *ptr);
+	void	forgetSpell(std::string const & spellName);
+	void	launchSpell(std::string const & spellName, ATarget const & ref);
 
 };
 

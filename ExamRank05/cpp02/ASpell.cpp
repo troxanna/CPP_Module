@@ -10,11 +10,11 @@ ASpell::~ASpell()
 	//std::cout << this->getName() << "My job here is done!\n";
 }
 
-ASpell::ASpell(const ASpell & other)
+ASpell::ASpell(ASpell const & other)
 {
 	*this = other;
 }
-ASpell & ASpell::operator=(const ASpell & other)
+ASpell & ASpell::operator=(ASpell const & other)
 {
 	if (this == &other)
 		return (*this);
