@@ -34,14 +34,17 @@ Character & Character::operator=( const Character & other )
 
 Character::~Character()
 {
-    for (size_t i = 0; i < this->currentSize; i++)
-		delete this->materials[i];
+    // for (size_t i = 0; i < this->currentSize; i++)
+    //     delete this->materials[i];
 }
 
 void Character::use(int idx, ICharacter& target)
 {
-    if (this->materials[idx])
-	    this->materials[idx]->use(target);
+    ICharacter *ptr = nullptr;
+    if (ptr == &target)
+        return ;
+    if (idx < (int)this->currentSize && this->materials[idx])
+        this->materials[idx]->use(target);
 }
 
 std::string const & Character::getName() const
@@ -60,10 +63,10 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-    idx = 0;
-	// if (this->_type[idx] != NULL)
-	// {
-	// 	delete this->_type[idx];
-	// 	this->_type[idx] = NULL;
-	// }
+    if (idx >= (int)this->currentSize)
+        return ;
+    for (size_t i = idx; i < this->currentSize && this->materials[i + 1]; i++)
+        this->materials[i] = this->materials[i + 1];
+     this->currentSize--;
+     this->materials[currentSize] = NULL;
 }
