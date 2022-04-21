@@ -23,7 +23,7 @@ ASpell & ASpell::operator=(const ASpell & other)
 	return (*this);
 }
 
-void	ASpell::launch(ATarget const & ptr)
+void	ASpell::launch(ATarget const & ptr) const
 {
 	ptr.getHitBySpell(*this);
 }

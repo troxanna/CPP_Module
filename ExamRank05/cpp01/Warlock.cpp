@@ -44,7 +44,7 @@ void	Warlock::forgetSpell(const std::string & spellName)
 }
 void	Warlock::launchSpell(const std::string & spellName, const ATarget & ref)
 {
-	ATarget *tmp = 0;
+	ATarget const *tmp = 0;
 	if (tmp == &ref)
 		return ;
 	std::vector<ASpell*>::iterator ite = this->spells.end();

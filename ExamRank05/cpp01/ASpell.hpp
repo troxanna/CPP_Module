@@ -24,7 +24,7 @@ public:
 
 	virtual ASpell *clone() const = 0;
 
-	void	launch(ATarget const & ptr);
+	void	launch(ATarget const & ptr) const;
 
 	// void	setTitle(const std::string & title) {this->title = title;};
 	// void introduce() const;
